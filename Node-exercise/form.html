@@ -53,12 +53,12 @@ function clickme(){
 
 </head>
 <body>
-
+<form action="/postData" method="post">
         <p>Please enter your full Name</p>
 
        
     <label for="fname" id="fnameId">Full Name </label><br>
-     <input type="text" id = "inputId"/><br>
+     <input type="text" id = "inputId" name = "name"/><br>
     
     <br>
     
@@ -81,12 +81,10 @@ function clickme(){
 </select>
 <br>
 <br>
-<input type="button" onclick="clicked()" value="Prints onText area"/>
-<button id="pavalBtn" onclick="clickme()">Outside text area</button>
-    <br>
-    <br>
+<input type="submit" value="Submit"/>
+
   
-  <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+</form>
    
 </body>
 </html>
