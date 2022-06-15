@@ -1,154 +1,154 @@
-//Numbers divisible by 4
-function number(array) {
-    var temp = [];
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] % 4 === 0) {
-            temp.push(array[i]);
-        }
-    }
-    return temp;
+// //Numbers divisible by 4
+// function number(array) {
+//     var temp = [];
+//     for (let i = 0; i < array.length; i++) {
+//         if (array[i] % 4 === 0) {
+//             temp.push(array[i]);
+//         }
+//     }
+//     return temp;
 
-}
-// let b = [1,2,3,4,5,6,7,8]
-// //number(b);
-// console.log(number(b))
+// }
+// // let b = [1,2,3,4,5,6,7,8]
+// // //number(b);
+// // console.log(number(b))
 
-//Even Numbers
-function even(array) {
-    let temp = [];
+// //Even Numbers
+// function even(array) {
+//     let temp = [];
 
-    for (let value of array) {
-        if (value % 2 == 0) {
-            temp.push(value);
-        }
-    }
-    return temp;
+//     for (let value of array) {
+//         if (value % 2 == 0) {
+//             temp.push(value);
+//         }
+//     }
+//     return temp;
 
-}
+// }
 
-// var a = [1,2,3,4,5,6,7,8];
-// even(a);
-// console.log(even(a));
+// // var a = [1,2,3,4,5,6,7,8];
+// // even(a);
+// // console.log(even(a));
 
-//Odd Numbers
-function odd(array) {
+// //Odd Numbers
+// function odd(array) {
 
-    let temp = [];
+//     let temp = [];
 
-    for (let item of array) {
-        if (item % 2 != 0) {
-            temp.push(item);
-        }
-
-
-    }
-    return temp;
-}
-
-// odd(a);
-// console.log(odd(a))
+//     for (let item of array) {
+//         if (item % 2 != 0) {
+//             temp.push(item);
+//         }
 
 
-//Sum of all numbers
-function sum(array) {
-    var temp = [];
-    let sum = 0;
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] % 4 === 0) {
-            sum += array[i];
+//     }
+//     return temp;
+// }
 
-            //temp.push(array[i]);
-        }
-    }
-    return sum;
-
-}
-
-//    sum(a);
-//    console.log(sum(a));
-
-//Sum of Odd
-function sumOfOdd(array) {
-    let sum = 0;
-    for (let odd of array) {
-        if (odd % 2 !== 0) {
-            sum += odd;
-        }
-    }
-    return sum;
-}
-
-//    console.log("sum of odd = " + sumOfOdd(a));
+// // odd(a);
+// // console.log(odd(a))
 
 
-//Sum of Even
-function sumOfEven() {
+// //Sum of all numbers
+// function sum(array) {
+//     var temp = [];
+//     let sum = 0;
+//     for (let i = 0; i < array.length; i++) {
+//         if (array[i] % 4 === 0) {
+//             sum += array[i];
 
-    let sum = 0;
-    for (let value of array) {
-        if (value % 2 == 0) {
-            sum += value;
-        }
-    }
-    return temp;
+//             //temp.push(array[i]);
+//         }
+//     }
+//     return sum;
 
-}
+// }
 
-//Find the Unique Number in the Array
+// //    sum(a);
+// //    console.log(sum(a));
 
+// //Sum of Odd
+// function sumOfOdd(array) {
+//     let sum = 0;
+//     for (let odd of array) {
+//         if (odd % 2 !== 0) {
+//             sum += odd;
+//         }
+//     }
+//     return sum;
+// }
 
-function UniqueNum(array) {
-
-    let temp = [];
-    let index = 0;
-
-    for (let i = 0; i < array.length - 1; i++) {
-        let count = 0;
-        for (let j = 0; j < i; j++)
-            if (array[i] == array[j]) {
-                count = 1;
-                break
-            }
-
-        if (count == 0) {
-            temp.push(array[i])
-            index++;
-        }
-
-    }
-    return temp;
-}
-
-let c = [1, 2, 3, 4, 2, 4, 3, 5, 6, 7, 8, 8, 9];
-// console.log(UniqueNum(c));
+// //    console.log("sum of odd = " + sumOfOdd(a));
 
 
-let myArray = [50, "apple", { a: 1 }]
-function getType(array) {
-    return array.map((x) => typeof x);
-}
+// //Sum of Even
+// function sumOfEven() {
 
-//    console.log(getType(myArray));
+//     let sum = 0;
+//     for (let value of array) {
+//         if (value % 2 == 0) {
+//             sum += value;
+//         }
+//     }
+//     return temp;
+
+// }
+
+// //Find the Unique Number in the Array
 
 
-function getTypes(array) {
-    let solution = []
-    for (let i = 0; i < array.length; i++) {
-        solution.push(typeof array[i])
-    }
-    return solution;
-}
+// function UniqueNum(array) {
 
-//    console.log(getTypes(myArray));
+//     let temp = [];
+//     let index = 0;
 
-//    function destructureArray(array){
+//     for (let i = 0; i < array.length - 1; i++) {
+//         let count = 0;
+//         for (let j = 0; j < i; j++)
+//             if (array[i] == array[j]) {
+//                 count = 1;
+//                 break
+//             }
 
-//     let myObj = {};
-//     let key = "number0"
-//     for(let i = 0; i < array.length; i++){
-//     myObj[key]
-//        myObj.push(typeof array[i] )
-//      }
+//         if (count == 0) {
+//             temp.push(array[i])
+//             index++;
+//         }
+
+//     }
+//     return temp;
+// }
+
+// let c = [1, 2, 3, 4, 2, 4, 3, 5, 6, 7, 8, 8, 9];
+// // console.log(UniqueNum(c));
+
+
+// let myArray = [50, "apple", { a: 1 }]
+// function getType(array) {
+//     return array.map((x) => typeof x);
+// }
+
+// //    console.log(getType(myArray));
+
+
+// function getTypes(array) {
+//     let solution = []
+//     for (let i = 0; i < array.length; i++) {
+//         solution.push(typeof array[i])
+//     }
+//     return solution;
+// }
+
+// //    console.log(getTypes(myArray));
+
+// //    function destructureArray(array){
+
+// //     let myObj = {};
+// //     let key = "number0"
+// //     for(let i = 0; i < array.length; i++){
+// //     myObj[key]
+// //        myObj.push(typeof array[i] )
+// //      }
 
 array = [50,'apple',{a:1}];
 
@@ -157,10 +157,13 @@ for (let i = 0; i < array.length; i++) {
     typeArray.push(typeof array[i])
 }
 
+// console.log(typeArray);
 let indexArray = [];
 for (let i = 0; i < array.length; i++) {
     indexArray.push(i);
 }
+
+// console.log(indexArray);
 
 let concatArray = [];
 for (let i = 0; i < array.length; i++) {
@@ -168,17 +171,25 @@ for (let i = 0; i < array.length; i++) {
     // = typeArray.concat(indexArray);
 }
 
+console.log(concatArray);
+
 let finalArray = [];
-concatArray.forEach((element, index) => {
+// concatArray.forEach((element, index) => {
 
-  finalArray[element]=array[index];
+//   finalArray[element]=array[index];
 
-});
+// });
+
+for(let i = 0; i < concatArray.length; i++){
+
+    finalArray.push(concatArray[i] + array[i]);
+
+}
 
 console.log(finalArray);
 
 
-// }
+
 
 
 

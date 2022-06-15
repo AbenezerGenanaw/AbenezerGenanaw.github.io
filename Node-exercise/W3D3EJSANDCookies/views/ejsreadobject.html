@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div><label for="position">Position: </label><%=position%></div>
+    <div><label for="position">Skills</label></div>
+    <div><label for="position"> Name: </label><%=skill.name%></div>
+    <div><label for="position">Level: </label><%=skill.level%></div>
+    
+    
+    
+    <div><label for="position">Level: </label>
+        <ul class="loop_example">
+            <% for (const item of jet) { %>
+            <!-- <% if (item == "bla") continue; %> -->
+            <li class="item">a : <%= item.a %></li>
+            <li class="item">b : <%= item.b %></li>
+            <% } %>
+            </ul>
+    </div>
+
+
+<div>Manual test</div>
+<div>
+<%let objs = {a:1} %>
+<p><%=objs.a%></p>
+</div>
+
+
+
+<div>
+    <h1>HERRE</h1>
+
+   <% let selEle = [] %>
+    <% let address = [] %>
+   <% for (const key in obj) { %>
+     <%   let firstItem = obj[key] %>
+    <%    if (Array.isArray(firstItem)) {  %>
+       <%     for (const single of firstItem) { %>
+         <%       if (typeof single == 'object') {%>
+                    <% address.push(single) %>
+              <%  } else { %>
+                    <% selEle.push(single) %>
+                    <%}%>
+                <%}%>
+       <% } else if (typeof firstItem == 'object') { %>
+          <%  for (const inK in firstItem) { %>
+               <span> <%=inK%></span> <span> <%=firstItem[inK]%></span>
+                <%}%>
+     <%   } else {%>
+           <div><label> <%=key %> :: </label> <span><%=firstItem%></span></div>
+           <%}%>
+    <%}%>
+
+<br>
+<br>
+<select name="select" id="select">
+   <% for(let item of selEle){%>
+        <option value=<%=item%>><%=item%></option>
+    <%}%>
+</select>
+<br>
+<br>
+
+    <% for(let i=0; i<address.length; i++){ %>
+    <ul>
+        <li>
+    Address <span><%=i+1%></span>
+    
+
+    <% let single = address[i] %>
+<ul>
+    <% for(let key in single){  %>
+        
+        <li>
+            <%=single[key]%>
+        </li>
+        <%   } %>
+    </ul>
+    </li>
+    </ul>
+<%} %>
+
+</div>
+
+</body>
+</html>

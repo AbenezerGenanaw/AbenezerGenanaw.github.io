@@ -54,8 +54,6 @@ function clickme(){
 </head>
 <body>
 
-    <form action="/postData">
-
         <p>Please enter your full Name</p>
 
        
@@ -83,9 +81,12 @@ function clickme(){
 </select>
 <br>
 <br>
-<input type="submit"  value="submit"/>
-
+<input type="button" onclick="clicked()" value="Prints onText area"/>
+<button id="pavalBtn" onclick="clickme()">Outside text area</button>
+    <br>
+    <br>
   
-  </form>
+  <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+   
 </body>
 </html>
